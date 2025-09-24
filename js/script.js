@@ -40,13 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form data
             const formData = new FormData(this);
-            const name = formData.get('name');
             const email = formData.get('email');
-            const subject = formData.get('subject');
             const message = formData.get('message');
 
             // Basic validation
-            if (!name || !email || !message) {
+            if (|| !email || !message) {
                 alert('Please fill in all required fields.');
                 return;
             }
