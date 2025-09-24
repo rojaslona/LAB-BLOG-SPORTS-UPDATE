@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contactanos - Tipsters</title>
+  <title>Contáctanos - Tipsters</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
@@ -11,59 +11,64 @@
 <body>
 
 <header>
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Sports Blog Logo" />
-        </a>
-      </div>
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">Sobre Nosotros</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link active">Contacto</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #111;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" alt="Sports Blog Logo" height="40" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contacto</a>
+        </li>
       </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 </header>
 
 <main>
-  <section class="page-header">
+  <section class="page-header py-5 text-center bg-light">
     <div class="container">
       <h1>Contáctanos</h1>
       <p>Queremos escucharte</p>
     </div>
   </section>
-
-  <section class="contact-content">
+  <section class="contact-content py-5">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
+      <div class="row g-4">
+        <div class="col-md-6">
           <h2>Canales de comunicación</h2>
           <p>Estamos siempre al pendiente de los mensajes que nos hagan llegar</p>
 
-          <div class="contact-item">
-            <h3>Correo</h3>
+          <div class="mb-3">
+            <h4>Correo</h4>
             <p>contacto@tipsters.com</p>
           </div>
 
-          <div class="contact-item">
-            <h3>Teléfono</h3>
+          <div class="mb-3">
+            <h4>Teléfono</h4>
             <p>+52 (555) 123-4567</p>
           </div>
 
-          <div class="contact-item">
-            <h3>Oficina Central</h3>
+          <div class="mb-3">
+            <h4>Oficina Central</h4>
             <p>Montes Naturales 32, Alamos<br />CDMX</p>
           </div>
         </div>
 
-        <div class="contact-form">
+        <div class="col-md-6">
           <h2>¿Tienes alguna sugerencia?</h2>
 
           <div id="alerta" class="alert alert-success alert-dismissible fade d-none" role="alert">
@@ -72,17 +77,17 @@
           </div>
 
           <form id="formContacto">
-            <div class="form-group mb-3">
+            <div class="mb-3">
               <label for="email" class="form-label">Correo electrónico *</label>
               <input type="email" class="form-control" id="email" name="email" required />
             </div>
 
-            <div class="form-group mb-3">
+            <div class="mb-3">
               <label for="message" class="form-label">Mensaje *</label>
               <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn btn btn-primary">Enviar Mensaje</button>
+            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
           </form>
         </div>
       </div>
@@ -121,21 +126,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
   crossorigin="anonymous"></script>
+
 <script>
   const form = document.getElementById('formContacto');
   const alerta = document.getElementById('alerta');
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
-
-
     alerta.classList.remove('d-none');
     alerta.classList.add('show');
-
     form.reset();
   });
 </script>
 
 </body>
 </html>
-
